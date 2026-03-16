@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-accent: #e05109;
+  --color-accent-light: #f4722b;
+  --color-accent-green: #00695c;
+  --color-accent-yellow: #f0ac00;
+  --color-background-light: #F5F1EB;
+  --color-background-dark: #030712;
+  --font-display: "Inter", sans-serif;
+  --radius: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+}
+
+body {
+  font-family: var(--font-display);
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
