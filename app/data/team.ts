@@ -66,25 +66,28 @@ At the Department of Environmental Affairs and Development Planning, Zukisa deep
   },
 ];
 
-export const PARTNERS: TeamMember[] = [
-  {
-    name: "Fatima Shama",
-    role: "Government Innovation, Bloomberg Philanthropies",
-    image: "/Team Pictures/Fatima.jpg",
-    linkedIn: "https://www.linkedin.com/in/fatima-a-shama-57129a255",
-    bio: `Fatima Shama manages the global city leadership initiatives portfolio on the Government Innovation team at Bloomberg Philanthropies. Fatima's multi-sector career has a common thread of focusing on people, programs and possibilities that respond to the needs and opportunities to invest in, advance and support vulnerable communities. She has over three decades of experience in health and education policy, youth development, community and workforce development and advocating for and supporting immigrants and communities of colour.
+export interface Partner {
+  name: string;
+  logo: string;
+  bio: string;
+}
 
-Before joining the Government Innovation team, Fatima served as the Head of Diversity and Inclusion for the Americas at Bloomberg LP. She served in Mayor Michael R. Bloomberg's administration as the commissioner of the NYC Mayor's Office of Immigrant Affairs, the senior policy advisor on education and a policy advisor on health care access. Prior to joining Bloomberg LP, Fatima was the CEO and executive director of The Fresh Air Fund, a youth development nonprofit organisation, in NYC.`,
+export const PARTNERS: Partner[] = [
+  {
+    name: "African Centre for Cities",
+    logo: "/ACC-Red-Logo-480x162.webp",
+    bio: `ACC is an interdisciplinary hub at the University of Cape Town with a mandate to conduct meaningful research on how to understand, recast, and address pressing urban crises. ACC is recognized globally as a leading institution for urban research in Africa with a decade-long track record of promoting a Southern perspective on the future of cities.`,
   },
   {
-    name: "Jerry Bruno",
-    role: "Government Innovation, Bloomberg Philanthropies",
-    image: "/Team Pictures/Jerry.webp",
-    linkedIn: "https://www.linkedin.com/in/jerry-bruno-99a53534",
-    bio: `Jerry Bruno works on the Government Innovation team at Bloomberg Philanthropies where he manages the Bloomberg Center for Cities at Harvard University. In addition, he is the program lead for the work in Israel at the Bloomberg-Sagol Center for City Leadership at Tel Aviv University and in Africa at the University of Cape Town's African Centre for Cities.
+    name: "Big Win Philanthropy",
+    logo: "/Big-Win-Red-480x451.webp",
+    bio: `Big Win Philanthropy has deep experience developing leadership programs, having co-developed the Harvard Ministerial Leadership Program held at Harvard University, and the Amujae Initiative hosted by the Ellen Johnson Sirleaf Presidential Center for Women and Development. Big Win also provides direct support to heads of state and public leaders across Africa who are pursuing transformational change.`,
+  },
+  {
+    name: "Bloomberg Philanthropies",
+    logo: "/BloombergPhilanthropies-927659917-480x150.webp",
+    bio: `Bloomberg Philanthropies invests in 700 cities and 150 countries around the world to ensure better, longer lives for the greatest number of people. The organization focuses on creating lasting change in five key areas: the Arts, Education, Environment, Government Innovation, and Public Health.
 
-Jerry was previously a Strategic Project Manager at the New York City Department of Homeless Services (DHS) Administrator's Office. In his role, he advised on the DHS strategic plan and managed high-level collaborations such as ThriveNYC, the city's commitment to creating a mental health system that works for everyone.
-
-Prior to the Department of Homeless Services, Jerry worked at New York City Department of Small Business Services (SBS), working closely with Minority/Women-owned Business Enterprises that contracted with government on the city, state and federal level. Jerry began his career in City government as a New York City Urban Fellow. Jerry is passionate about traveling and connecting with different people and cultures from around the world. He has been to all 7 continents — yes, including Antarctica.`,
+Bloomberg Philanthropies encompasses all of Michael R. Bloomberg's giving, including his foundation, corporate, and personal philanthropy as well as Bloomberg Associates, a philanthropic consultancy that advises cities around the world. In 2023, Bloomberg Philanthropies distributed $3 billion.`,
   },
 ];

@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { TEAM, PARTNERS, type TeamMember } from "../data/team";
+import { TEAM, PARTNERS, type TeamMember, type Partner } from "../data/team";
 
 function MemberCard({
   member,
@@ -113,16 +113,27 @@ export default function TeamPage() {
         <h2 className="text-2xl font-black text-gray-900 pb-3 mb-8 border-b-2 border-accent">
           Partners Supporting Change
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {PARTNERS.map((member) => (
-            <MemberCard
-              key={member.name}
-              member={member}
-              isExpanded={expanded === member.name}
-              onToggle={() =>
-                setExpanded(expanded === member.name ? null : member.name)
-              }
-            />
+        <p className="text-gray-600 text-sm leading-relaxed max-w-2xl mb-10">
+          AMALI is a partnership between the African Centre for Cities (ACC),
+          Big Win Philanthropy and Bloomberg Philanthropies.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {PARTNERS.map((partner) => (
+            <div key={partner.name} className="border-b border-gray-200 pb-8">
+              <div className="h-16 flex items-center mb-5">
+                <Image
+                  src={partner.logo}
+                  alt={partner.name}
+                  width={160}
+                  height={64}
+                  className="object-contain max-h-16"
+                />
+              </div>
+              <h3 className="text-lg font-black text-gray-900 mb-3">{partner.name}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {partner.bio.split("\n")[0]}
+              </p>
+            </div>
           ))}
         </div>
       </div>
