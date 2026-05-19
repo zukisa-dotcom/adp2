@@ -29,16 +29,16 @@ const JOURNEY_STEPS = [
       "Sessions focused on completing the data inventory, designing a data reporting tool, refining legacy goal metrics and KPIs, and designing the performance management meeting routine.",
   },
   {
-    phase: "2nd Site Visit & Launch",
-    timing: "September",
-    description:
-      "Launch of the data reporting tool (performance dashboard) and formal launch of the performance management routine. Capacity-building support for city officials.",
-  },
-  {
     phase: "AMALI Reunion",
     timing: "October",
     description:
       "All ADP cities convene. Mayors and governors share results, participate in discussions, and showcase their legacy goal progress.",
+  },
+  {
+    phase: "2nd Site Visit & Launch",
+    timing: "October – November",
+    description:
+      "Launch of the data reporting tool (performance dashboard) and formal launch of the performance management routine. Capacity-building support for city officials.",
   },
   {
     phase: "Wrap-Up & Aftercare",
@@ -140,7 +140,7 @@ const STATS = [
   { value: "38+", label: "Cities Supported" },
   { value: "4", label: "Cohorts Delivered" },
   { value: "15+", label: "Countries Reached" },
-  { value: "100+", label: "City Officials Trained" },
+  { value: "146", label: "City Officials Trained" },
 ];
 
 const PARTNERSHIP_STEPS = [
@@ -212,7 +212,52 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
+{/* Closing Statement + CTA */}
+      <section className="max-w-5xl mx-auto px-6 py-16">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-2">
+            A Commitment to Lasting Change
+          </p>
+          <h2 className="text-3xl md:text-4xl font-black text-gray-900 leading-tight mb-6">
+            More Than a Technical Assistance Initiative
+          </h2>
+          <p className="text-gray-500 text-sm leading-relaxed mb-10">
+            The AMALI Data Programme is a commitment to building the
+            institutions, habits, and capabilities that allow African cities to
+            govern better — for their residents, for their regions, and for the
+            future. Every data point collected, every dashboard built, and every
+            performance meeting held is a step toward a more accountable,
+            evidence-driven urban Africa.
+          </p>
+          <div className="flex items-center justify-center gap-4 flex-wrap">
+            <Link
+              href="/#contact"
+              className="bg-accent hover:bg-accent-light text-white font-bold text-sm px-8 py-4 transition-colors inline-flex items-center gap-2"
+            >
+              Contact Us
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </Link>
+            <Link
+              href="/cities"
+              className="text-sm font-semibold text-accent hover:text-accent-light transition-colors"
+            >
+              View Our Cities
+            </Link>
+          </div>
+        </div>
+      </section>
       {/* Stats */}
       <section className="bg-accent-green py-14 px-6">
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -258,80 +303,6 @@ export default function AboutPage() {
               <p className="text-sm text-gray-500 leading-relaxed">
                 {p.description}
               </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Engagement Journey */}
-      <section className="bg-gray-900 text-white py-16 px-6">
-        <div className="max-w-5xl mx-auto">
-          <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-2">
-            Engagement Journey
-          </p>
-          <h2 className="text-3xl md:text-4xl font-black leading-tight mb-4">
-            The ADP Programme Journey
-          </h2>
-          <p className="text-white/60 text-sm leading-relaxed max-w-2xl mb-12">
-            The ADP follows a structured engagement journey spanning
-            approximately one year, from city selection through aftercare. Each
-            phase is designed to build on the last, progressively deepening city
-            teams&apos; data capabilities and embedding performance management
-            as a sustainable routine.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {JOURNEY_STEPS.map((step) => (
-              <div
-                key={step.phase}
-                className="border-t-2 border-accent pt-6 pb-4"
-              >
-                <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-1">
-                  {step.timing}
-                </p>
-                <h3 className="text-base font-black text-white mb-3">
-                  {step.phase}
-                </h3>
-                <p className="text-sm text-white/50 leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Support Model */}
-      <section className="max-w-5xl mx-auto px-6 py-16">
-        <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-2">
-          Support Model
-        </p>
-        <h2 className="text-3xl md:text-4xl font-black text-gray-900 leading-tight mb-4">
-          How We Support City Teams
-        </h2>
-        <p className="text-gray-500 text-sm leading-relaxed max-w-2xl mb-12">
-          The ADP delivers support through four complementary channels, each
-          designed to meet cities where they are and build their capacity
-          progressively.
-        </p>
-
-        <div className="flex flex-col gap-8">
-          {SUPPORT_CHANNELS.map((ch) => (
-            <div
-              key={ch.number}
-              className="grid grid-cols-1 md:grid-cols-[80px_1fr] gap-4 items-start border-b border-gray-200 pb-8 last:border-0"
-            >
-              <span className="text-4xl font-black text-accent/20">
-                {ch.number}
-              </span>
-              <div>
-                <h3 className="text-lg font-black text-gray-900 mb-2">
-                  {ch.title}
-                </h3>
-                <p className="text-sm text-gray-500 leading-relaxed">
-                  {ch.description}
-                </p>
-              </div>
             </div>
           ))}
         </div>
@@ -383,6 +354,44 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Support Model */}
+      <section className="max-w-5xl mx-auto px-6 py-16">
+        <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-2">
+          Support Model
+        </p>
+        <h2 className="text-3xl md:text-4xl font-black text-gray-900 leading-tight mb-4">
+          How We Support City Teams
+        </h2>
+        <p className="text-gray-500 text-sm leading-relaxed max-w-2xl mb-12">
+          The ADP delivers support through four complementary channels, each
+          designed to meet cities where they are and build their capacity
+          progressively.
+        </p>
+
+        <div className="flex flex-col gap-8">
+          {SUPPORT_CHANNELS.map((ch) => (
+            <div
+              key={ch.number}
+              className="grid grid-cols-1 md:grid-cols-[80px_1fr] gap-4 items-start border-b border-gray-200 pb-8 last:border-0"
+            >
+              <span className="text-4xl font-black text-accent/20">
+                {ch.number}
+              </span>
+              <div>
+                <h3 className="text-lg font-black text-gray-900 mb-2">
+                  {ch.title}
+                </h3>
+                <p className="text-sm text-gray-500 leading-relaxed">
+                  {ch.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      
 
       {/* City Data Advisors */}
       <section className="max-w-5xl mx-auto px-6 py-16">
@@ -493,52 +502,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Closing Statement + CTA */}
-      <section className="max-w-5xl mx-auto px-6 py-16">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-2">
-            A Commitment to Lasting Change
-          </p>
-          <h2 className="text-3xl md:text-4xl font-black text-gray-900 leading-tight mb-6">
-            More Than a Technical Assistance Initiative
-          </h2>
-          <p className="text-gray-500 text-sm leading-relaxed mb-10">
-            The AMALI Data Programme is a commitment to building the
-            institutions, habits, and capabilities that allow African cities to
-            govern better — for their residents, for their regions, and for the
-            future. Every data point collected, every dashboard built, and every
-            performance meeting held is a step toward a more accountable,
-            evidence-driven urban Africa.
-          </p>
-          <div className="flex items-center justify-center gap-4 flex-wrap">
-            <Link
-              href="/#contact"
-              className="bg-accent hover:bg-accent-light text-white font-bold text-sm px-8 py-4 transition-colors inline-flex items-center gap-2"
-            >
-              Contact Us
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </Link>
-            <Link
-              href="/cities"
-              className="text-sm font-semibold text-accent hover:text-accent-light transition-colors"
-            >
-              View Our Cities
-            </Link>
-          </div>
-        </div>
-      </section>
+      
 
       <Footer />
     </main>

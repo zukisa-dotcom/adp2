@@ -185,7 +185,7 @@ function PillarsSection() {
     {
       title: "Decision Support Tools",
       desc: "Equipping city leaders with dashboards, analytics, and insights that turn data into actionable decisions for urban transformation.",
-      img: "/Decision Support.png",
+      img: "/Decision_Support.png",
     },
     {
       title: "Research",
@@ -263,8 +263,8 @@ function ImpactSection() {
             across the continent.
           </p>
           <div className="grid grid-cols-3 gap-4">
-            <StatCard value="30+" label="African Cities" />
-            <StatCard value="150+" label="City Leaders" />
+            <StatCard value="26+" label="African Cities" />
+            <StatCard value="146+" label="City Leaders" />
             <StatCard value="32m" label="Residents Reached" />
           </div>
         </div>
