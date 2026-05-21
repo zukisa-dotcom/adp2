@@ -137,8 +137,8 @@ const ADVISOR_ROLES = [
 ];
 
 const STATS = [
-  { value: "38+", label: "Cities Supported" },
-  { value: "4", label: "Cohorts Delivered" },
+  { value: "26", label: "Cities Supported" },
+  { value: "3", label: "Cohorts Delivered" },
   { value: "15+", label: "Countries Reached" },
   { value: "146", label: "City Officials Trained" },
 ];
